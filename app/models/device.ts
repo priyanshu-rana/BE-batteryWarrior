@@ -23,7 +23,7 @@ export default class Device extends BaseModel {
   declare updatedAt: DateTime
 
   @manyToMany(() => User, {
-    pivotTable: 'user_devices',
+    pivotTable: 'users_devices',
     pivotColumns: ['last_logged_in', 'is_primary', 'meta_data'],
   })
   public users!: ManyToMany<typeof User>

@@ -8,6 +8,7 @@
 */
 
 const UserController = () => import('#controllers/user_controller')
+const DeviceController = () => import('#controllers/device_controller')
 import router from '@adonisjs/core/services/router'
 
 // router.on('/').render('pages/home')
@@ -17,3 +18,4 @@ router.post('/login', [UserController, 'login'])
 router.post('/logout', [UserController, 'logout'])
 router.get('/profile', [UserController, 'profile'])
 router.get('/check-login', [UserController, 'checkLoginStatus'])
+router.post('/register-device', [DeviceController, 'registerDevice'])

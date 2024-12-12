@@ -25,7 +25,6 @@ export default class UserController {
       })
     } catch (error) {
       return response.unprocessableEntity({
-        message: 'Validation error',
         errors: error.messages || error.message,
       })
     }

@@ -34,7 +34,7 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare updatedAt: DateTime | null
 
   @manyToMany(() => Device, {
-    pivotTable: 'user_devices',
+    pivotTable: 'users_devices',
     pivotColumns: ['last_logged_in', 'is_primary', 'meta_data'],
   })
   public devices!: ManyToMany<typeof Device>
